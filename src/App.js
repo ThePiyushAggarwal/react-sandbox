@@ -1,9 +1,9 @@
-import UseMemoExample from './components/UseMemoExample'
+import UseCallbackExample from './components/UseCallbackExample'
 
 function App() {
   return (
     <div className="conatiner mt-5">
-      <UseMemoExample />
+      <UseCallbackExample />
     </div>
   )
 }
