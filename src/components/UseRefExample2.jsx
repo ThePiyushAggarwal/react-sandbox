@@ -16,7 +16,7 @@ function UseRefExample2() {
       <h2> Prev name state: {prevName.current} </h2>
       <input
         type="text"
-        value={name}
+        value={name} // this line is not required in this example
         onChange={(e) => setName(e.target.value)}
         className="form-control"
       />

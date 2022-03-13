@@ -2,15 +2,15 @@ import { useState } from 'react'
 import Todo from './Todo'
 
 function UseRefExample3() {
-  const [showTodo, setShowTodo] = useState(true)
+  const [showTodo, setShowTodo] = useState(false)
 
   return (
-    <div>
+    <div className="container">
       <button
         className="btn btn-primary"
         onClick={() => setShowTodo(!showTodo)}
       >
-        Toggle Todo
+        {showTodo ? 'Hide' : 'Show'}
       </button>
       {showTodo && <Todo />}
     </div>

@@ -7,16 +7,18 @@ function Todo() {
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then((res) => res.json())
+      .then((response) => response.json())
       .then((data) => {
         setTimeout(() => {
           if (isMounted.current) {
             setTodo(data)
             setLoading(false)
+            console.log(data)
           }
         }, 3000)
       })
 
+    // Runs when component is unmounted IMPORTANT
     return () => {
       isMounted.current = false
     }
